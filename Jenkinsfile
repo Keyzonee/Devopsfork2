@@ -1,7 +1,7 @@
-        pipeline{
+pipeline{
             tools{
-                jdk 'myjava'
-                maven 'mymaven'
+                jdk 'MYJAVA'
+                maven 'MYMAVEN'
             }
             agent none
             stages{
@@ -19,7 +19,7 @@
                         sh 'mvn compile'
                 }
                 }
-                stage('CodeReview on Slave1'){
+                stage('CodeReview on Slave2'){
                     agent {label 'slave2'}
                     steps{
                     
